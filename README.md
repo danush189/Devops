@@ -1,64 +1,64 @@
-Git Basics:
-sudo apt install git
-git --version
-mkdir project
-cd project
-nano example.py
-python3 example.py
-git init
-git status
-git add .
-git commit -m "Message"
-git log
---Create a github repo--
-git remote add origin https://repo.git
-git remote -v
-git push origin main/master
-git pull origin master
-git branch test_branch
-git checkout test_branch
---makes changes in the .py file and commit--
-git checkout master/main
-git merge test_branch
+Git Basics: </br  >
+sudo apt install git </br  >
+git --version </br  >
+mkdir project </br  >
+cd project </br  >
+nano example.py </br  >
+python3 example.py </br  >
+git init </br  >
+git status </br  >
+git add .</br  >
+git commit -m "Message"</br  >
+git log</br  >
+--Create a github repo--</br  >
+git remote add origin https://repo.git</br  >
+git remote -v</br  >
+git push origin main/master</br  >
+git pull origin master</br  >
+git branch test_branch</br  >
+git checkout test_branch</br  >
+--makes changes in the .py file and commit-- </br  >
+git checkout master/main</br  >
+git merge test_branch</br  >
 
-Docker Basics:
-docker --version
-sudo docker images
-sudo docker pull hello-world
-sudo docker run hello-world
-sudo docker run -p 80:80 -d nginx
-sudo docker ps
-sudo docker stop container_id
+Docker Basics:</br  >
+docker --version</br  >
+sudo docker images</br  >
+sudo docker pull hello-world</br  >
+sudo docker run hello-world</br  >
+sudo docker run -p 80:80 -d nginx</br  >
+sudo docker ps</br  >
+sudo docker stop container_id</br  >
 
-Flas app with docker:
-nano app.py
-"from flask import Flask, render_template, request
-app=Flask(__name__)
-@app.route("/")
-def home_page(name=None):
-    return render_template("index.html",name=name)
-if __name__ == '__main__':
-  app.run(host='0.0.0.0',port=5000)
+Flas app with docker:</br  >
+nano app.py</br  >
+"from flask import Flask, render_template, request</br  >
+app=Flask(__name__)</br  >
+@app.route("/")</br  >
+def home_page(name=None):</br  >
+    return render_template("index.html",name=name)</br  >
+if __name__ == '__main__':</br  >
+  app.run(host='0.0.0.0',port=5000)</br  >
 "
-sudo apt install python3-pip
+sudo apt install python3-pip</br  >
 
-nano Dockerfile
-"FROM python3-alpine3.15
-WORKDIR /app
-COPY ./app
-RUN pip install flask
-CMD ["python3","app.py"]
+nano Dockerfile</br  >
+"FROM python3-alpine3.15</br  >
+WORKDIR /app</br  >
+COPY ./app</br  >
+RUN pip install flask</br  >
+CMD ["python3","app.py"]</br  >
 
-sudo docker build -t myimg:1 .
-sudo docker run -p 8000:5000 myimg:1
---docker hub--
-sudo docker login -u username
-sudo docker tag myimg:1 username/dockerimage
-sudo docker push username/dockerimage
-docker logout
+sudo docker build -t myimg:1 .</br  >
+sudo docker run -p 8000:5000 myimg:1</br  >
+--docker hub--</br  >
+sudo docker login -u username</br  >
+sudo docker tag myimg:1 username/dockerimage</br  >
+sudo docker push username/dockerimage</br  >
+docker logout</br  >
 
 Jenkins
-sudo systemctl start jenkins
+sudo systemctl start jenkins</br  >
 sudo systemctl status jenkins
 --check https://localhost:8080--
 sudo more ...
